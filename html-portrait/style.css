@@ -30,9 +30,20 @@ p:hover {
   align-items: center;
 }
 
-h1,
 a {
   animation: coolAnimation 3s infinite;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  transition: letter-spacing 0.3s ease;
+}
+
+h1:hover {
+  letter-spacing: 0.2em;
 }
 
 #p1 {
