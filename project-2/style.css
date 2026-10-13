@@ -98,6 +98,65 @@ body.decision-page h1 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
+.dot-brain {
+  background-color: #4b5563;
+}
+
+body.decision-page h2 {
+  color: #111;
+  margin: 0;
+}
+
+.analogy {
+  max-width: 480px;
+  text-align: center;
+}
+
+.analogy h2 {
+  margin-bottom: 0.5rem;
+}
+
+.analogy p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.heart {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  background-color: #e11d2e;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e11d2e;
+}
+
+.heart::before {
+  top: -30px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 30px;
+}
+
+.heart:hover {
+  transform: rotate(-45deg) scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
 footer {
   margin-top: 2rem;
   font-size: 0.9rem;
