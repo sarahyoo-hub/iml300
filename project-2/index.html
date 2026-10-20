@@ -6,11 +6,72 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="decision-page">
-    <h1>Make a Decision</h1>
-    <div class="dots">
-      <a href="pages/confirm-red.html" class="dot dot-red" aria-label="Red option"></a>
-      <a href="pages/confirm-blue.html" class="dot dot-blue" aria-label="Blue option"></a>
+  <body class="decision-page home-page">
+    <div class="blobs" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+      <span class="blob blob-4"></span>
+      <span class="blob blob-5"></span>
     </div>
+    <h1 class="decision-title">Make a Decision</h1>
+    <div class="dots">
+      <a href="pages/confirm-red.html" class="dot dot-black" aria-label="Black option"></a>
+      <a href="pages/grey-area.html" class="dot dot-grey" aria-label="Grey area"></a>
+      <a href="pages/confirm-blue.html" class="dot dot-white" aria-label="White option"></a>
+    </div>
+
+    <canvas id="mouse-trails" aria-hidden="true"></canvas>
+
+    <script>
+      const canvas = document.getElementById("mouse-trails");
+      const ctx = canvas.getContext("2d");
+      let lastPoint = null;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener("resize", resize);
+      resize();
+
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+
+      document.addEventListener("mousemove", (e) => {
+        const point = { x: e.clientX, y: e.clientY };
+        if (lastPoint) {
+          const dx = point.x - lastPoint.x;
+          const dy = point.y - lastPoint.y;
+          const speed = Math.hypot(dx, dy);
+          const width = Math.max(4, Math.min(18, 18 - speed * 0.6));
+          const angle = Math.atan2(dy, dx) + Math.PI / 2;
+
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.85)";
+          ctx.lineWidth = width;
+          ctx.beginPath();
+          ctx.moveTo(lastPoint.x, lastPoint.y);
+          ctx.lineTo(point.x, point.y);
+          ctx.stroke();
+
+          for (let i = 0; i < 2; i++) {
+            const offset = (Math.random() - 0.5) * width * 0.9;
+            const ox = Math.cos(angle) * offset;
+            const oy = Math.sin(angle) * offset;
+            ctx.strokeStyle = "rgba(0, 0, 0, 0.15)";
+            ctx.lineWidth = Math.max(1, width * 0.4);
+            ctx.beginPath();
+            ctx.moveTo(lastPoint.x + ox, lastPoint.y + oy);
+            ctx.lineTo(point.x + ox, point.y + oy);
+            ctx.stroke();
+          }
+        }
+        lastPoint = point;
+      });
+
+      document.addEventListener("mouseleave", () => {
+        lastPoint = null;
+      });
+    </script>
   </body>
 </html>

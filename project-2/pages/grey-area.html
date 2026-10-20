@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Grey Area</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body class="grey-area-page">
+    <img
+      src="../assets/grey-area.png"
+      alt="A grid of overlapping grey, white, and black circles"
+      class="grey-area-bg"
+    />
+
+    <h1 class="grey-area-title">
+      Welcome to the grey area, let&rsquo;s navigate your indecision
+    </h1>
+
+    <div id="mouse-dot" class="mouse-dot"></div>
+
+    <a href="#" id="back-button" class="back-button">Go back</a>
+
+    <script src="../script.js"></script>
+    <script>
+      const dot = document.getElementById("mouse-dot");
+      document.addEventListener("mousemove", (e) => {
+        dot.style.left = e.clientX + "px";
+        dot.style.top = e.clientY + "px";
+      });
+    </script>
+  </body>
+</html>
