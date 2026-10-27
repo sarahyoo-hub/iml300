@@ -6,9 +6,70 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
 
-  <body class="decision-page">
-    <h1>You chose success.</h1>
-    <p><a href="brain-path.html">Back to the thoughts</a></p>
+  <body class="thoughts-page">
+    <h1 class="thoughts-heading">Success</h1>
+
+    <div class="value-stage">
+      <svg class="value-circle" viewBox="0 0 400 400" aria-hidden="true">
+        <path
+          class="value-circle-inner"
+          d="M 203 48 C 262 45 320 80 348 134 C 370 182 364 244 328 292 C 298 332 246 356 192 350 C 132 344 76 308 52 252 C 36 204 48 146 86 100 C 116 64 160 44 203 48 Z"
+        />
+        <path
+          d="M 200 42 C 258 38 318 72 346 128 C 372 178 368 246 330 296 C 300 338 244 362 188 356 C 126 350 70 312 48 254 C 30 206 44 148 82 102 C 112 66 156 46 200 42 Z"
+        />
+      </svg>
+
+      <div class="thought-field">
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 24%; left: 50%; animation-duration: 7s;"
+          data-title="Pros and Cons"
+          data-text="I made a list. Pros on one side, cons on the other. As if a column could decide for me."
+          >pros &amp;<br />cons</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 41%; left: 78%; animation-duration: 6s; animation-delay: 0.5s;"
+          data-title="The Overlap"
+          data-text="Somewhere between what I want and what I can actually have, there's a small space. That's where I'm supposed to land."
+          >the<br />overlap</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 69%; left: 64%; animation-duration: 6.5s; animation-delay: 1s;"
+          data-title="The Art of Deciding"
+          data-text="Maybe deciding isn't a science. Maybe it's just something you get better at by doing it badly first."
+          >the art of<br />deciding</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 76%; left: 31%; animation-duration: 7.5s; animation-delay: 1.6s;"
+          data-title="What Does Success Mean?"
+          data-text="I keep chasing a word I never defined for myself."
+          >what does<br />it mean?</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 41%; left: 23%; animation-duration: 5.5s; animation-delay: 0.3s;"
+          data-title="Data vs. Feeling"
+          data-text="The graph says one thing. My gut says another."
+          >data vs.<br />feeling</a
+        >
+      </div>
+    </div>
+
+    <div id="concept-card" class="concept-card">
+      <button class="concept-card-close" aria-label="Close">&times;</button>
+      <h2 class="concept-card-title"></h2>
+      <p class="concept-card-text"></p>
+    </div>
+
     <a href="#" id="back-button" class="back-button">Go back</a>
     <script src="../script.js"></script>
   </body>

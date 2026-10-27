@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 body {
-  font-family: sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   margin: 2rem;
+  color: #1a1a1a;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 nav {
@@ -29,11 +39,9 @@ nav a {
   display: inline-block;
   text-decoration: none;
   color: #8e8e93;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
   padding: 0.85rem 1.3rem;
   border-radius: 999px;
   border: 1px solid transparent;
@@ -50,9 +58,9 @@ nav a:hover {
 
 nav a.active {
   color: #ffffff;
-  background-color: #11284a;
-  border-color: #3b82f6;
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+  background-color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
 body.decision-page {
@@ -63,19 +71,20 @@ body.decision-page {
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  background: #fafafa;
+  background: #f5f5f5;
 }
 
 body.decision-page h1 {
-  font-size: 2.5rem;
-  color: #111;
+  font-size: 3.2rem;
+  color: #111111;
   margin: 0;
 }
 
 .decision-title {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  transform: rotate(-1.5deg);
 }
 
 .home-page {
@@ -202,25 +211,26 @@ body.decision-page h1 {
 
 .wrong-note {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
-  text-align: right;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .wrong-note p {
   margin: 0 0 0.6rem;
   color: #ffffff;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
   opacity: 0.85;
 }
 
 .wrong-options {
   display: flex;
   gap: 1rem;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .wrong-options a {
@@ -259,13 +269,14 @@ body.decision-page h1 {
   margin: 0;
   max-width: 600px;
   text-align: center;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: #111;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 1rem 1.75rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 0.75rem 1.75rem;
   border-radius: 16px;
+  transform: translateX(-50%) rotate(-1deg);
 }
 
 .mouse-dot {
@@ -290,14 +301,11 @@ body.decision-page h1 {
   z-index: 3;
   color: #111;
   text-decoration: none;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.6rem 1.4rem;
-  border: 1px solid #111;
-  border-radius: 999px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1.5px solid #111;
+  border-radius: 999px 999px 996px 1002px / 999px 996px 1002px 999px;
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
@@ -396,7 +404,7 @@ body.decision-page h1 {
 .dots {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2.75rem;
 }
 
 .dot {
@@ -429,7 +437,8 @@ body.decision-page h1 {
 }
 
 .dot-brain {
-  background-color: #4b5563;
+  background-color: #ffffff;
+  border: 3px solid #000000;
 }
 
 body.decision-page h2 {
@@ -447,8 +456,9 @@ body.decision-page h2 {
 }
 
 .analogy p {
-  color: #333;
+  color: #222222;
   line-height: 1.6;
+  font-size: 1.2rem;
 }
 
 .heart {
@@ -457,7 +467,7 @@ body.decision-page h2 {
   width: 60px;
   height: 60px;
   margin-top: 30px;
-  background-color: #e11d2e;
+  background-color: #000000;
   transform: rotate(-45deg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -469,7 +479,7 @@ body.decision-page h2 {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #e11d2e;
+  background-color: #000000;
 }
 
 .heart::before {
@@ -495,7 +505,7 @@ body.decision-page h2 {
   align-items: center;
   background-color: #000;
   color: #fff;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .thoughts-heading {
@@ -512,6 +522,15 @@ body.decision-page h2 {
   min-height: 55vh;
 }
 
+.circle-field {
+  width: min(78vmin, 540px);
+  height: min(78vmin, 540px);
+  max-width: none;
+  min-height: 0;
+  flex: none;
+  margin: 1.5rem auto;
+}
+
 .thought-center {
   position: absolute;
   top: 50%;
@@ -524,8 +543,11 @@ body.decision-page h2 {
 
 .thought {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 110px;
   height: 110px;
+  margin: -55px 0 0 -55px;
   border-radius: 50%;
   border: 1.5px solid rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.04);
@@ -535,9 +557,9 @@ body.decision-page h2 {
   text-align: center;
   color: #fff;
   text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
   animation: float 6s ease-in-out infinite;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
@@ -548,42 +570,42 @@ body.decision-page h2 {
 }
 
 .thought-1 {
-  top: 6%;
-  left: 10%;
+  top: 14%;
+  left: 50%;
   animation-duration: 7s;
 }
 
 .thought-2 {
-  top: 12%;
-  left: 65%;
+  top: 32%;
+  left: 81%;
   animation-duration: 5.5s;
   animation-delay: 0.5s;
 }
 
 .thought-3 {
-  top: 42%;
-  left: 2%;
+  top: 68%;
+  left: 81%;
   animation-duration: 6.5s;
   animation-delay: 1s;
 }
 
 .thought-4 {
-  top: 55%;
-  left: 72%;
+  top: 86%;
+  left: 50%;
   animation-duration: 8s;
   animation-delay: 1.5s;
 }
 
 .thought-5 {
-  top: 2%;
-  left: 38%;
+  top: 68%;
+  left: 19%;
   animation-duration: 6s;
   animation-delay: 0.8s;
 }
 
 .thought-6 {
-  top: 65%;
-  left: 35%;
+  top: 32%;
+  left: 19%;
   animation-duration: 7.5s;
   animation-delay: 1.2s;
 }
@@ -591,19 +613,26 @@ body.decision-page h2 {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    margin-top: -55px;
   }
   50% {
-    transform: translateY(-20px);
+    margin-top: -75px;
   }
 }
 
 .thought-prompt {
-  margin: 1.5rem 0 3rem;
-  text-align: center;
+  position: fixed;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin: 0;
+  max-height: 70vh;
   color: #ddd;
-  max-width: 420px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  z-index: 3;
 }
 
 .thought-prompt a {
@@ -620,7 +649,7 @@ body.decision-page h2 {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .web-back {
@@ -659,10 +688,10 @@ body.decision-page h2 {
 }
 
 .web-caption {
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
+  color: #999;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
   margin: 0 0 2rem;
 }
 
@@ -673,13 +702,12 @@ body.decision-page h2 {
 
 .confirm-btn {
   display: inline-block;
-  padding: 0.85rem 2.2rem;
-  border-radius: 999px;
+  padding: 0.7rem 2.2rem;
+  border-radius: 999px 996px 999px 996px / 996px 999px 996px 999px;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
   border: 2px solid #111;
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
@@ -710,6 +738,158 @@ body.decision-page h2 {
 
 footer {
   margin-top: 2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #555;
+}
+
+.spiral-page {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.spiral-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150vmax;
+  height: 150vmax;
+  margin-top: -75vmax;
+  margin-left: -75vmax;
+  object-fit: cover;
+  animation: spiral-spin 50s linear infinite;
+}
+
+@keyframes spiral-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spiral-title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  margin: 0;
+  max-width: 80%;
+  text-align: center;
+  color: #000000;
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+}
+
+.spiral-continue {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1.5rem;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.spiral-continue:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.value-stage {
+  position: relative;
+  width: min(78vmin, 540px);
+  height: min(78vmin, 540px);
+  margin: 1.5rem auto;
+}
+
+.value-circle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.value-circle path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 1.5;
+}
+
+.value-circle .value-circle-inner {
+  stroke: rgba(255, 255, 255, 0.3);
+}
+
+.value-stage .thought-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  min-height: 0;
+  flex: none;
+}
+
+.concept-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  z-index: 5;
+  width: min(90%, 360px);
+  background-color: #ffffff;
+  color: #111111;
+  padding: 1.75rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.concept-card.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.concept-card-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.1rem;
+  margin: 0 0 0.6rem;
+}
+
+.concept-card-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.concept-card-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.85rem;
+  background: none;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  color: #111111;
+  cursor: pointer;
 }

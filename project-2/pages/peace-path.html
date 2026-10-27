@@ -6,9 +6,70 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
 
-  <body class="decision-page">
-    <h1>You chose peace.</h1>
-    <p><a href="brain-path.html">Back to the thoughts</a></p>
+  <body class="thoughts-page">
+    <h1 class="thoughts-heading">Peace</h1>
+
+    <div class="value-stage">
+      <svg class="value-circle" viewBox="0 0 400 400" aria-hidden="true">
+        <path
+          class="value-circle-inner"
+          d="M 203 48 C 262 45 320 80 348 134 C 370 182 364 244 328 292 C 298 332 246 356 192 350 C 132 344 76 308 52 252 C 36 204 48 146 86 100 C 116 64 160 44 203 48 Z"
+        />
+        <path
+          d="M 200 42 C 258 38 318 72 346 128 C 372 178 368 246 330 296 C 300 338 244 362 188 356 C 126 350 70 312 48 254 C 30 206 44 148 82 102 C 112 66 156 46 200 42 Z"
+        />
+      </svg>
+
+      <div class="thought-field">
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 24%; left: 50%; animation-duration: 7s;"
+          data-title="Coin Flip"
+          data-text="When logic runs out, I let a coin decide. It's not about the answer &mdash; it's about finally having one."
+          >coin<br />flip</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 41%; left: 78%; animation-duration: 6s; animation-delay: 0.5s;"
+          data-title="No Undo Button"
+          data-text="There's no undo. Once it's done, it's done. Maybe that's what makes it matter."
+          >no undo<br />button</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 69%; left: 64%; animation-duration: 6.5s; animation-delay: 1s;"
+          data-title="There Is No Right Decision"
+          data-text="There is no right decision. Just the one you make, and the life you build around it."
+          >no right<br />decision</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 76%; left: 31%; animation-duration: 8s; animation-delay: 1.5s;"
+          data-title="The Dead End"
+          data-text="Every &ldquo;wrong&rdquo; choice felt like a dead end. But I kept walking anyway."
+          >dead<br />end</a
+        >
+        <a
+          href="#"
+          class="thought concept-node"
+          style="top: 41%; left: 23%; animation-duration: 5.5s; animation-delay: 0.3s;"
+          data-title="Restart"
+          data-text="Some days I wish I could restart. Most days, I just keep going."
+          >restart</a
+        >
+      </div>
+    </div>
+
+    <div id="concept-card" class="concept-card">
+      <button class="concept-card-close" aria-label="Close">&times;</button>
+      <h2 class="concept-card-title"></h2>
+      <p class="concept-card-text"></p>
+    </div>
+
     <a href="#" id="back-button" class="back-button">Go back</a>
     <script src="../script.js"></script>
   </body>
